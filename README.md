@@ -30,8 +30,22 @@ A Java Spring Boot insurance management system that supports customer registrati
 2. Start: `mvn spring-boot:run`
 3. Access:
    - Swagger: http://localhost:8080/swagger-ui.html
-   - H2 Console: http://localhost:8080/h2-console
    - Frontend: http://localhost:8080/index.html
+
+## Configuration
+This project uses PostgreSQL in the `dev` profile and H2 only for tests.
+- Primary config: `src/main/resources/application.properties`
+- PostgreSQL dev config: `src/main/resources/application-dev.properties`
+- Test config: `src/test/resources/application-test.properties`
+
+### PostgreSQL example
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/insurance_db
+spring.datasource.username=postgres
+spring.datasource.password=your_password
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+```
 
 ## SOAP Endpoint
 Base SOAP location: http://localhost:8080/soap/premiumCalculator.wsdl

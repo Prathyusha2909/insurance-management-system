@@ -12,6 +12,7 @@ import com.insurance.repository.PolicyRepository;
 import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 
@@ -55,10 +56,18 @@ public class PolicyService {
 
         PremiumRequest premiumRequest = new PremiumRequest();
         premiumRequest.setPolicyType(request.getPolicyType().toUpperCase());
-        premiumRequest.setAge(30);
+        premiumRequest.setAge(calculateCustomerAge(customer));
         premiumRequest.setSumInsured(request.getSumInsured());
         PremiumResponse premiumResponse = premiumCalculationService.calculatePremium(premiumRequest);
         policy.setPremiumAmount(premiumResponse.getFinalPremium());
+
+    }
+
+    private int calculateCustomerAge(Customer customer) {
+        if (customer.getDateOfBirth() == null) {
+            throw new InvalidRequestException("Customer date of birth is required for premium calculation");
+        }
+        return Period.between(customer.getDateOfBirth(), LocalDate.now()).getYears();
         return policyRepository.save(policy);
     }
 
