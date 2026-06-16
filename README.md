@@ -20,14 +20,14 @@ A Java Spring Boot insurance management system that supports customer registrati
 - Spring Boot
 - Spring Data JPA
 - Spring Web and Spring Web Services
-- H2 in-memory database for local demo
+- PostgreSQL for development, H2 for unit/integration tests
 - Maven
 - Swagger/OpenAPI
 - HTML/CSS/JavaScript frontend
 
 ## Run Locally
 1. Build: `mvn clean package`
-2. Start: `mvn spring-boot:run`
+2. Start with H2 for local preview: `mvn spring-boot:run -Dspring-boot.run.profiles=local`
 3. Access:
    - Swagger: http://localhost:8080/swagger-ui.html
    - Frontend: http://localhost:8080/index.html
@@ -52,19 +52,19 @@ Base SOAP location: http://localhost:8080/soap/premiumCalculator.wsdl
 
 ## Screenshots
 ### Swagger UI
-![Swagger UI](docs/screenshots/swagger-ui.svg)
+![Swagger UI](docs/screenshots/swagger-ui.png)
 
 ### Premium Calculator page
-![Premium Calculator](docs/screenshots/premium-calculator.svg)
+![Premium Calculator](docs/screenshots/premium-calculator.png)
 
 ### Claim Submission page
-![Claim Submission](docs/screenshots/claim-submission.svg)
+![Claim Submission](docs/screenshots/claim-submission.png)
 
 ### Admin Reports page
-![Admin Reports](docs/screenshots/admin-reports.svg)
+![Admin Reports](docs/screenshots/admin-reports.png)
 
 ### SOAP WSDL / SOAP request
-![SOAP WSDL](docs/screenshots/soap-wsdl.svg)
+![SOAP WSDL](docs/screenshots/soap-wsdl.png)
 
 ## Notes
 This project uses layered architecture with controllers, services, repositories, DTOs, and SOAP integration.
