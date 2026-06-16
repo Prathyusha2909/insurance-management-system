@@ -1,5 +1,7 @@
 # Insurance Policy & Claims Management System
 
+[![Java CI](https://github.com/Prathyusha2909/insurance-management-system/actions/workflows/maven.yml/badge.svg)](https://github.com/Prathyusha2909/insurance-management-system/actions/workflows/maven.yml)
+
 ## Overview
 A Java Spring Boot insurance management system that supports customer registration, policy lifecycle, premium calculations, claims workflows, SQL-based reporting, REST APIs, and SOAP premium service.
 
