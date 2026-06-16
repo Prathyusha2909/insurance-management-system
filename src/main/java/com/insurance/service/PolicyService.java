@@ -60,7 +60,7 @@ public class PolicyService {
         premiumRequest.setSumInsured(request.getSumInsured());
         PremiumResponse premiumResponse = premiumCalculationService.calculatePremium(premiumRequest);
         policy.setPremiumAmount(premiumResponse.getFinalPremium());
-
+        return policyRepository.save(policy);
     }
 
     private int calculateCustomerAge(Customer customer) {
@@ -68,7 +68,6 @@ public class PolicyService {
             throw new InvalidRequestException("Customer date of birth is required for premium calculation");
         }
         return Period.between(customer.getDateOfBirth(), LocalDate.now()).getYears();
-        return policyRepository.save(policy);
     }
 
     public Policy getPolicy(Long id) {

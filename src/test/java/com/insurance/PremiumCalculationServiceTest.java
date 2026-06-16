@@ -2,6 +2,7 @@ package com.insurance;
 
 import com.insurance.dto.PremiumRequest;
 import com.insurance.dto.PremiumResponse;
+import com.insurance.exception.InvalidRequestException;
 import com.insurance.service.HealthInsurancePremiumCalculator;
 import com.insurance.service.LifeInsurancePremiumCalculator;
 import com.insurance.service.PremiumCalculationService;
@@ -93,7 +94,7 @@ public class PremiumCalculationServiceTest {
         request.setAge(35);
         request.setSumInsured(BigDecimal.valueOf(200000));
 
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> service.calculatePremium(request));
+        InvalidRequestException exception = assertThrows(InvalidRequestException.class, () -> service.calculatePremium(request));
         assertTrue(exception.getMessage().contains("Unsupported policy type"));
     }
 }
