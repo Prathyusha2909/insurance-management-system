@@ -50,5 +50,21 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 ## SOAP Endpoint
 Base SOAP location: http://localhost:8080/soap/premiumCalculator.wsdl
 
+## Screenshots
+### Swagger UI
+![Swagger UI](docs/screenshots/swagger-ui.svg)
+
+### Premium Calculator page
+![Premium Calculator](docs/screenshots/premium-calculator.svg)
+
+### Claim Submission page
+![Claim Submission](docs/screenshots/claim-submission.svg)
+
+### Admin Reports page
+![Admin Reports](docs/screenshots/admin-reports.svg)
+
+### SOAP WSDL / SOAP request
+![SOAP WSDL](docs/screenshots/soap-wsdl.svg)
+
 ## Notes
 This project uses layered architecture with controllers, services, repositories, DTOs, and SOAP integration.
