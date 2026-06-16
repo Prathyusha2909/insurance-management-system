@@ -26,8 +26,12 @@ A Java Spring Boot insurance management system that supports customer registrati
 - HTML/CSS/JavaScript frontend
 
 ## Run Locally
-1. Build: `mvn clean package`
-2. Start with H2 for local preview: `mvn spring-boot:run -Dspring-boot.run.profiles=local`
+1. Build:
+   - macOS/Linux: `./mvnw clean package`
+   - Windows: `.\mvnw.cmd clean package`
+2. Start with H2 for local preview:
+   - macOS/Linux: `./mvnw spring-boot:run -Dspring-boot.run.profiles=local`
+   - Windows: `.\mvnw.cmd spring-boot:run -Dspring-boot.run.profiles=local`
 3. Access:
    - Swagger: http://localhost:8080/swagger-ui.html
    - Frontend: http://localhost:8080/index.html
