@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Customer</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/register.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Registration</h1>
+        <form id="registrationForm">
+            <label>Full Name<input type="text" name="fullName" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Password<input type="password" name="password" required></label>
+            <label>Role<select name="role"><option>CUSTOMER</option><option>AGENT</option></select></label>
+            <label>Phone<input type="text" name="phone" required></label>
+            <label>Date of Birth<input type="date" name="dateOfBirth" required></label>
+            <label>Gender<select name="gender"><option>Male</option><option>Female</option><option>Other</option></select></label>
+            <label>Address<textarea name="address" required></textarea></label>
+            <button type="submit">Register</button>
+        </form>
+        <div id="message"></div>
+    </div>
+</body>
+</html>

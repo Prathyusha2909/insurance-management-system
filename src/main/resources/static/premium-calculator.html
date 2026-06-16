@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Calculator</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/premium.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Premium Calculator</h1>
+        <form id="premiumForm">
+            <label>Policy Type<select name="policyType"><option>LIFE</option><option>HEALTH</option><option>VEHICLE</option><option>PROPERTY</option></select></label>
+            <label>Age<input type="number" name="age" required></label>
+            <label>Sum Insured<input type="number" name="sumInsured" required></label>
+            <label><input type="checkbox" name="smoker"> Smoker</label>
+            <label><input type="checkbox" name="preExistingDisease"> Pre-existing Disease</label>
+            <label>Vehicle Age<input type="number" name="vehicleAge"></label>
+            <label><input type="checkbox" name="accidentHistory"> Accident History</label>
+            <label>Property Age<input type="number" name="propertyAge"></label>
+            <label><input type="checkbox" name="highRiskLocation"> High Risk Location</label>
+            <button type="submit">Calculate Premium</button>
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

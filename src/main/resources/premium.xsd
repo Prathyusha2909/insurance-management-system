@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://insurance.com/soap" xmlns:tns="http://insurance.com/soap" elementFormDefault="qualified">
+    <xs:element name="calculatePremiumRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="policyType" type="xs:string"/>
+                <xs:element name="age" type="xs:int"/>
+                <xs:element name="sumInsured" type="xs:decimal"/>
+                <xs:element name="smoker" type="xs:boolean"/>
+                <xs:element name="preExistingDisease" type="xs:boolean"/>
+                <xs:element name="vehicleAge" type="xs:int"/>
+                <xs:element name="accidentHistory" type="xs:boolean"/>
+                <xs:element name="propertyAge" type="xs:int"/>
+                <xs:element name="highRiskLocation" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="calculatePremiumResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="policyType" type="xs:string"/>
+                <xs:element name="basePremium" type="xs:decimal"/>
+                <xs:element name="riskLoading" type="xs:decimal"/>
+                <xs:element name="finalPremium" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

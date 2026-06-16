@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claim Submission</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/claim.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Submit a Claim</h1>
+        <form id="claimForm">
+            <label>Policy ID<input type="number" name="policyId" required></label>
+            <label>Customer ID<input type="number" name="customerId" required></label>
+            <label>Claim Amount<input type="number" step="0.01" name="claimAmount" required></label>
+            <label>Reason<textarea name="claimReason" required></textarea></label>
+            <button type="submit">Submit Claim</button>
+        </form>
+        <div id="claimMessage"></div>
+    </div>
+</body>
+</html>
